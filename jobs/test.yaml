@@ -1,0 +1,15 @@
+-  job-template:
+     name: '{name}_job'
+     description:  'Automatically generated test'
+     project-type:  freestyle
+
+     trigger:
+      - github-pull-request:
+          cron: H/60 * * * * 
+          build-desc-template: 'build description'
+          trigger-phrase: 'retest this please'
+          githook-hooks: true
+          
+     builders:
+      -  shell: '{command}'
+      
