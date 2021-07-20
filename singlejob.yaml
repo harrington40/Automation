@@ -8,8 +8,7 @@
             goals: clean compile package install test
     publishers:
       - archive:
-          artifacts: 'spring-boot-samples\spring-boot-sample-atmosphere\target\*.jar'
-          allow-empty: 'true'
+          artifacts: 'spring-boot-samples\spring-boot-sample-atmosphere\target\*.jar'          allow-empty: 'true'
           fingerprint: true
           default-excludes: false
     name: Jenkins-Job-Builder-Blog
@@ -35,5 +34,5 @@
       - git:
          url: https://github.com/harrington40/Automation.git
          branches:
-          - master
+          - develop
   

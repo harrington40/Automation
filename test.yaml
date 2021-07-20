@@ -1,7 +1,0 @@
-- job:
-    name: test_job
-    description: 'Automatically generated test'
-    project-type: freestyle
-    builders:
-      - shell: 'ls'
-
