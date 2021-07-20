@@ -1,5 +1,13 @@
 - project:  
     name: project-example
+- scm:
+     name: scm-login
+      scm: 
+        - git:
+            url: ssh git@github.com:harrington40/Automation.git
+            branches:
+              - original/master
+               
     jobs:
       - '{name}_job':
            name:  'getspace'
@@ -11,3 +19,5 @@
       - '{name}_job':
            name: command-line-test
            command: jenkins-job --conf  etc/  update jobs/
+
+     

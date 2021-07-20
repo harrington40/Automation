@@ -2,6 +2,13 @@
      name: '{name}_job'
      description:  'Automatically generated test'
      project-type:  freestyle
+- scm:
+     name: '{scm-name}'
+      scm: 
+        - git:
+            url: '{ssh-url}'
+            branches:
+              - original/master
 
      trigger:
       - github-pull-request:
@@ -13,3 +20,6 @@
      builders:
       -  shell: '{command}'
       
+     parameters:
+       - string:
+          name: Test_harrington
