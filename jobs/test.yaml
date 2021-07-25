@@ -4,7 +4,7 @@
      project-type:  freestyle
 - scm:
      name: '{scm-name}'
-      scm: 
+     scm: 
         - git:
             url: '{ssh-url}'
             branches:
@@ -18,7 +18,9 @@
           githook-hooks: true
           
      builders:
-      -  shell: '{command}'
+      -  shell: |
+          '{command}'
+          '{command1}'
       
      parameters:
        - string:
