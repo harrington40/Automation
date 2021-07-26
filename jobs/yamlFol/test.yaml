@@ -3,4 +3,10 @@
      description:  'Automatically generated test'
      project-type:  freestyle
      builders:
-      -  shell: '{command}'
+     - dsl:
+          target: "jobs/**/*.groovy"
+          ignore-existing: "true"
+          removed-job-action: "DISABLE"
+          removed-view-action: "DELETE"
+          lookup-strategy: "SEED_JOB"
+          additional-classpath: "*.jar"

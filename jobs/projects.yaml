@@ -6,24 +6,10 @@
         - git:
             url: ssh git@github.com:harrington40/Automation.git
             branches:
-              - original/master
-               
-     jobs:
+              - develop   
+     job:
       - '{name}_job':
            name:  'getspace'
            command: df -h 
-      - '{name}_job':
-            name: listETCjjjj
-            command: ls/etc
-            parameter:
-               - string
-      - '{name}_job':
-               name: Testing Builder jobs
-               command: echo 'Hello builder'
-               command1: ls /etc
-                        
-      - '{name}_job':
-           name: command-line-test
-           command: jenkins-job --conf  etc/  update jobs/
-
+      
      

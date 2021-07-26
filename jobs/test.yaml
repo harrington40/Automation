@@ -6,7 +6,9 @@
      name: '{scm-name}'
      scm: 
         - git:
-            url: '{ssh-url}'
+            url: |
+                    '{ssh-url}'
+                     refspec('+refs/pull/*:refs/remotes/origin/pr/*')
             branches:
               - original/master
 
@@ -21,7 +23,11 @@
       -  shell: |
           '{command}'
           '{command1}'
-      
+      job('example') {
+  steps {
+    shell('echo Hello World!')
+  }
+}
      parameters:
        - string:
           name: Test_harrington
