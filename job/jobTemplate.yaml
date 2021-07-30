@@ -1,0 +1,6 @@
+- job-template:
+    name: '{name}-temp'
+    builder:
+        - shell: echo '{Command}'
+
+

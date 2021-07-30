@@ -1,0 +1,10 @@
+- job-Template:
+    name: '{name}-template'
+    builder:
+        - shell: echo '{Command}'
+
+    TEST_QUES:
+        - string: {"test_one": ['22']}
+
+
+

@@ -1,0 +1,10 @@
+- project:
+    name: Testing-EDKII
+    Command: echo "TEST_QUES"
+    jobs:
+        - '{name}-temp'
+        
+
+
+
+
