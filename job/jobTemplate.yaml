@@ -1,6 +1,22 @@
 - job-template:
     name: '{name}-temp'
-    builder:
-        - shell: echo '{Command}'
+    branch: master
+    
+    parameters:
+        - string:
+            name: BRANCH
+            JsonParams: '{jsonTable}'
+    scm:
+      - git:
+          url: https://github.com/harrington40/Automation.git
+          refspec: 'refs/heads/{branch}'
 
+    builders:
+       - dsl:
+            target: "job/**/*.groovy"
+            ignore-existing: "true"
+            removed-job-action: "DISABLE"
+            removed-view-action: "DELETE"
+            lookup-strategy: "SEED_JOB"
+            additional-classpath: "*.jar"
 
