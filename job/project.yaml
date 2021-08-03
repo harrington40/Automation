@@ -1,7 +1,10 @@
 - project:
     name: Testing-EDKII
     Command: echo "TEST_QUES"
-    jsonTable: {'one':['harrington',tori-ricks]}
+    jsonTable:
+        - "one"
+        - "harringtom"
+        - "ricks"
     jobs:
         - '{name}-temp'
     node: NodeLabel1 
