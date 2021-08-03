@@ -4,6 +4,12 @@
     jsonTable: {'one':['harrington',tori-ricks]}
     jobs:
         - '{name}-temp'
+    node: NodeLabel1 
+    logrotate:
+        daysToKeep: 3
+        numToKeep: 20
+        artifactDaysToKeep: -1
+        artifactNumToKeep: -1
 
         
 
